@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+//import { Plant } from '../../../shared/models';
+
 @Component({
   selector: 'app-plant-container',
   templateUrl: './plant-container.component.html',
