@@ -1,5 +1,5 @@
 <div>
-  <div *ngFor="let number of [0,1,2,3,4]">
-    <app-plant-container></app-plant-container>
+  <div *ngFor="let plant of ['' ,'carrot', 'onion', 'bennett', '', 'tomatoes', '']">
+    <app-plant-container [plantContainer]="plant"></app-plant-container>
   </div>
 </div>
