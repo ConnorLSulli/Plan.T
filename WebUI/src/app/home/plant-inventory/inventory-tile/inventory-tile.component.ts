@@ -19,9 +19,12 @@ export class InventoryTileComponent implements OnInit {
     this.tileInventoryDisplay = this.plantInventory.plant.plantName;
     this.quantityDisplay = ''+this.plantInventory.plantCount;
 
-    if (this.plantInventory.plant.plantName == 'remove'){
+    if (this.plantInventory.plant.plantName == 'remove'){}
+  }
 
-    }
+  tileClicked() {
+    this.plantInventory.isSelected = !this.plantInventory.isSelected;
+    //TODO call selectionservice
   }
 
 }
