@@ -11,12 +11,12 @@ export class InventoryTileComponent implements OnInit {
   @Input() plantInventory = new PlantInventory();
   constructor() { }
 
-  tileDisplay = '';
+  tileInventoryDisplay = '';
   quantityDisplay = '';
   
 
   ngOnInit() {
-    this.tileDisplay = this.plantInventory.plant.plantName;
+    this.tileInventoryDisplay = this.plantInventory.plant.plantName;
     this.quantityDisplay = ''+this.plantInventory.plantCount;
 
     if (this.plantInventory.plant.plantName == 'remove plant'){

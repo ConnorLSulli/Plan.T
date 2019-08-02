@@ -9,7 +9,7 @@ import { Plant } from 'src/app/shared/models/plant';
 })
 export class PlantInventoryComponent implements OnInit {
 
-  @Input() inventoryLength = 0;
+  @Input() inventoryLength = 5;
   constructor() { }
 
   inventoryTiles: PlantInventory[];
@@ -20,7 +20,7 @@ export class PlantInventoryComponent implements OnInit {
     this.inventoryTiles[0].plant = new Plant();
     this.inventoryTiles[0].plant.plantName = 'remove plant';
 
-    for(var i: number = 1; i < this.inventoryLength+1; i++) {
+    for(var i: number = 1; i < this.inventoryLength; i++) {
       this.inventoryTiles[i] = new PlantInventory();
       this.inventoryTiles[i].plant = new Plant();
       this.inventoryTiles[i].plant.plantName = 'test';
