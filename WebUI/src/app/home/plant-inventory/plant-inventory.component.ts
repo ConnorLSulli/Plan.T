@@ -7,7 +7,7 @@ import { Plant } from 'src/app/shared/models/plant';
   templateUrl: './plant-inventory.component.html',
   styleUrls: ['./plant-inventory.component.scss']
 })
-export class PlantInventoryComponent implements OnInit {
+export class PlantInventoryBarComponent implements OnInit {
 
   @Input() inventoryLength = 5;
   constructor() { }
