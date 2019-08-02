@@ -18,7 +18,7 @@ export class PlantInventoryComponent implements OnInit {
     this.inventoryTiles = [];
     this.inventoryTiles[0] = new PlantInventory();
     this.inventoryTiles[0].plant = new Plant();
-    this.inventoryTiles[0].plant.plantName = 'remove plant';
+    this.inventoryTiles[0].plant.plantName = 'remove';
 
     for(var i: number = 1; i < this.inventoryLength; i++) {
       this.inventoryTiles[i] = new PlantInventory();
