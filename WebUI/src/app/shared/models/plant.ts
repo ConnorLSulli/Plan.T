@@ -1,6 +1,6 @@
 export class Plant {
     plantId: number;
     plantName: string;
-    beneficialRelations: number[];
-    harmfulRelations: number[];
+    companionPlants: number[];
+    HarmfulPlants: number[];
 }

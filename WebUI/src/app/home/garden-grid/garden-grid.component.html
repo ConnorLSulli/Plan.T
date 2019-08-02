@@ -1,8 +1,8 @@
 
-  <div *ngFor="let x of [1,2,3,4,5]">
+  <div *ngFor="let plantRow of plantTiles">
   <div class="row justify-content-center">
-    <div *ngFor="let y of ['' ,'carrot', 'onion', 'bennett', '', 'tomatoes', '']">
-      <app-plant-container [plantContainer]="y"></app-plant-container>
+    <div *ngFor="let plantTile of plantRow">
+      <app-plant-container [plant]="plantTile"></app-plant-container>
     </div>
   </div>
 </div>
