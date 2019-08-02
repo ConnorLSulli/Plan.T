@@ -23,7 +23,7 @@ export class PlantInventoryBarComponent implements OnInit {
     for(var i: number = 1; i < this.inventoryLength; i++) {
       this.inventoryTiles[i] = new PlantInventory();
       this.inventoryTiles[i].plant = new Plant();
-      this.inventoryTiles[i].plant.plantName = 'test';
+      this.inventoryTiles[i].plant.plantName = 'test'+i;
     }
   }
 
