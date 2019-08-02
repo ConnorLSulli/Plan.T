@@ -1,0 +1,8 @@
+
+  <div *ngFor="let gardenRow of gardenTiles">
+  <div class="row justify-content-center">
+    <div *ngFor="let gardenTile of gardenRow">
+      <app-plant-container [gardenTile]="gardenTile"></app-plant-container>
+    </div>
+  </div>
+</div>
