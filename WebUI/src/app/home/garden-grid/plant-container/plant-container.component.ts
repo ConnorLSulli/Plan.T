@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Plant } from '../../../shared/models/plant';
+import { GardenTile } from '../../../shared/models/garden-tile';
 
 @Component({
   selector: 'app-plant-container',
@@ -9,14 +9,16 @@ import { Plant } from '../../../shared/models/plant';
 })
 export class PlantContainerComponent implements OnInit {
   
-  @Input() plant = new Plant();
+  @Input() gardenTile = new GardenTile();
   constructor() { }
 
+  tileDisplay = '';
+
   ngOnInit() {
-    
-    if( this.plant.plantName == null) {
-      this.plant = new Plant();
-      this.plant.plantName = 'Open';
+
+    this.tileDisplay = 'open';
+    if( this.gardenTile.isOccupied == true ) {
+      this.tileDisplay = this.gardenTile.plant.plantName;
     }
   }
 

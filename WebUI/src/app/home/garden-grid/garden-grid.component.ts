@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Plant } from '../../shared/models/plant';
+// import { Plant } from 'shared/models/plant';
+import { GardenTile } from '../../shared/models/garden-tile';
+import { Plant } from 'src/app/shared/models/plant';
 
 @Component({
   selector: 'app-garden-grid',
@@ -16,16 +18,18 @@ export class GardenGridComponent implements OnInit {
   @Input() gardenHeight = 3;
   constructor() { }
 
-  plantTiles: Plant[][];
+  gardenTiles: GardenTile[][];
 
   ngOnInit() {
     
-    this.plantTiles = [];
+    this.gardenTiles = [];
 
     for(var i: number = 0; i < this.gardenHeight; i++) {
-      this.plantTiles[i] = [];
+      this.gardenTiles[i] = [];
       for(var j: number = 0; j < this.gardenWidth; j++) {
-        this.plantTiles[i][j] = new Plant();
+        this.gardenTiles[i][j] = new GardenTile();
+        this.gardenTiles[i][j].isOccupied = false;
+        this.gardenTiles[i][j].plant = new Plant();
       }
     }
   }
