@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TileSelectService } from './services/tile-select.service';
+import { DataAccessService } from './services/data-access.service';
 
 @NgModule({
   declarations: [],
@@ -8,7 +9,7 @@ import { TileSelectService } from './services/tile-select.service';
     CommonModule
   ],
   providers: [
-    TileSelectService
+    TileSelectService, DataAccessService
   ]
 })
 export class CoreModule { }

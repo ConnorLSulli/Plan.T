@@ -16,6 +16,7 @@ export class PlantContainerComponent implements OnInit {
   tileDisplay = '';
 
   ngOnInit() {
+    this.gardenTile.isOccupied = false;
     this.setDisplay('');
     this.tileSelectService.getSubjectTile().subscribe(val => {
       
