@@ -17,16 +17,6 @@ export class PlantInventoryBarComponent implements OnInit {
 
   ngOnInit() {
     this.inventoryTiles = this.dataAccessService.getInventoryPlants();
-    // //this.inventoryTiles[0] = new PlantInventory();
-    // this.inventoryTiles[0] = new Plant();
-    // this.inventoryTiles[0].plantName = 'remove';
-
-    // for(var i: number = 1; i < this.inventoryLength; i++) {
-    //   //this.inventoryTiles[i] = new PlantInventory();
-    //   this.inventoryTiles[i] = new Plant();
-    //   this.inventoryTiles[i].plantName = 'test'+i;
-    // }
-    
   }
 
 }

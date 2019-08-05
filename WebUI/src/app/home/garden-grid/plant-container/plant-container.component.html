@@ -1,4 +1,5 @@
-<div class="plant-square d-flex justify-content-center align-items-center" (click)="gardenTileClicked()">
+<div class="plant-square d-flex justify-content-center align-items-center" 
+[ngClass]="{'negative-plant': isHarmfulPlant, 'positive-plant': isCompanionPlant, 'contains-plant': gardenTile.isOccupied}" (click)="gardenTileClicked()">
   <div>
     {{this.tileDisplay}}
   </div>

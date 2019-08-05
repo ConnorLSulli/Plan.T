@@ -22,7 +22,7 @@ export class InventoryTileComponent implements OnInit {
 
     this.tileSelectService.getSubjectTile().subscribe(val => {
        this.isSelected = (val.plantName == this.plantInventory.plantName);
-       console.log(val.plantName + ' ' + this.plantInventory.plantName + ' ' + this.isSelected)
+       //console.log(val.plantName + ' ' + this.plantInventory.plantName + ' ' + this.isSelected)
     });
 
   }

@@ -9,3 +9,19 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
+
+.contains-plant{
+    border-width: .5rem !important;
+  }
+
+.positive-plant{
+    border-color: lightgreen !important;
+    border-width: .5rem !important;
+  }
+
+  .negative-plant{
+    border-color: red !important;
+    border-width: .5rem !important;
+  }
+
+  
