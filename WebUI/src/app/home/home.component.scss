@@ -3,4 +3,14 @@
     font-size: 16rem;
     font-weight: 500;
     font-family: 'courier';
+    text-shadow:
+		-1px -1px 0 #ffffff,
+		1px -1px 0 #ffffff,
+		-1px 1px 0 #ffffff,
+		1px 1px 0 #ffffff;
+    
+}
+.bg
+{
+    background-color: lightblue;
 }
