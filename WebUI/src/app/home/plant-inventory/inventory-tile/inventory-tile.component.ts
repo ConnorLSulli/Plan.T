@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PlantInventory } from 'src/app/shared/models/plant-inventory';
+import { Plant } from 'src/app/shared/models/plant';
+import { TileSelectService } from 'src/app/core/services/tile-select.service';
 
 @Component({
   selector: 'app-inventory-tile',
@@ -8,20 +9,25 @@ import { PlantInventory } from 'src/app/shared/models/plant-inventory';
 })
 export class InventoryTileComponent implements OnInit {
 
-  @Input() plantInventory = new PlantInventory();
-  constructor() { }
+  @Input() plantInventory = new Plant();
+
+  constructor(private tileSelectService: TileSelectService) { }
 
   tileInventoryDisplay = '';
   quantityDisplay = '';
-  
+  isSelected = false;
 
   ngOnInit() {
-    this.tileInventoryDisplay = this.plantInventory.plant.plantName;
-    this.quantityDisplay = ''+this.plantInventory.plantCount;
+    this.tileInventoryDisplay = this.plantInventory.plantName;
 
-    if (this.plantInventory.plant.plantName == 'remove'){
+    this.tileSelectService.getSubjectTile().subscribe(val => {
+       this.isSelected = (val.plantName == this.plantInventory.plantName);
+       //console.log(val.plantName + ' ' + this.plantInventory.plantName + ' ' + this.isSelected)
+    });
 
-    }
   }
 
+  tileClicked(): void {
+    this.tileSelectService.ClickInventory(this.plantInventory);
+  }
 }

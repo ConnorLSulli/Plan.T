@@ -1,5 +1,2 @@
-<div class="plant-square d-flex justify-content-center align-items-center">
-  <div>
-    {{this.tileInventoryDisplay}}
-  </div>
-<div>
+<span class="plantTile clickable d-flex justify-content-center align-items-center" 
+    [ngClass]="{'selected-tile': isSelected}" (click)="tileClicked()"> {{this.tileInventoryDisplay}}<span>
