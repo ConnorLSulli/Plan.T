@@ -32,8 +32,12 @@ export class TileSelectService {
   //   return 0;
   // }
 
-  public getCurrentTile(): Observable<Plant> {
+  public getSubjectTile(): Observable<Plant> {
     return this.tileSubject;
+  }
+
+  public getCurrentTile(): Plant {
+    return this.currentPlant;
   }
 
 }
