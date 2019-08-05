@@ -1,3 +1,4 @@
+
 .plantTile{
     margin-bottom: 5rem;
     border-style: ridge;
@@ -6,3 +7,7 @@
     width: 6rem;
     align-content: space-around;
   }
+
+.selected-tile{
+  background-color: aqua !important;
+}

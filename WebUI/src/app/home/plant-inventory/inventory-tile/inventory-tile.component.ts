@@ -19,7 +19,6 @@ export class InventoryTileComponent implements OnInit {
 
   ngOnInit() {
     this.tileInventoryDisplay = this.plantInventory.plantName;
-    //this.quantityDisplay = ''+this.plantInventory.plantCount;
 
     this.tileSelectService.getCurrentTile().subscribe(val => {
        this.isSelected = (val.plantName == this.plantInventory.plantName);
