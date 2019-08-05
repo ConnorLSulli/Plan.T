@@ -22,15 +22,15 @@ export class TileSelectService {
     this.tileSubject.next(plant);
   }
 
-  public getRelation(neighbor: Plant): number {
-    neighbor.companionPlants.forEach(element => {
+  // public getRelation(neighbor: Plant): number {
+  //   neighbor.companionPlants.forEach(element => {
       
-    });
-    neighbor.HarmfulPlants.forEach(element => {
+  //   });
+  //   neighbor.HarmfulPlants.forEach(element => {
       
-    });
-    return 0;
-  }
+  //   });
+  //   return 0;
+  // }
 
   public getCurrentTile(): Observable<Plant> {
     return this.tileSubject;
